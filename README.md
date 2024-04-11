@@ -1,6 +1,6 @@
 ## Doxie Destinations
 
-~Proof of concept~
+~Proof of concept
 Plan your next vacation with help of AI Travel Agent!
 
 [Check out here!]()
