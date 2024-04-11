@@ -1,0 +1,263 @@
+* {
+  box-sizing: content-box;
+}
+
+:root {
+  font-family: "Inter", sans-serif;
+  background-color: #f6f2ee;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+button {
+  align-self: stretch;
+  margin: 0.75em 0;
+  font-family: "Inter", sans-serif;
+  padding: 0.425em 1.25em;
+  border: 3px solid #01001b;
+  font-weight: bold;
+  border-radius: 2em;
+  background-color: #e68151;
+  color: #01001b;
+  font-size: 1.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background-color: #eaa67a;
+}
+
+button:disabled {
+  border-color: #01001b94;
+  color: #01001b94;
+  background-color: #644d4279;
+  cursor: not-allowed;
+}
+
+input {
+  background-color: #f6f2ee;
+}
+
+/* STARTING SCREEN */
+
+.starting-screen {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.starting-screen img {
+  width: 300px;
+  height: 300px;
+}
+
+/* TRIP FORM */
+
+.trip-form {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+.trip-form label {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-block: 0.5em 0.25em;
+}
+
+.trip-form input {
+  font-family: "Inter", sans-serif;
+  display: block;
+  padding: 0.425em 0.2em;
+  font-size: 1.3rem;
+  text-align: center;
+  border: 3px solid #01001b;
+  border-radius: 2em;
+  font-weight: bold;
+}
+
+.trip-form fieldset {
+  all: unset;
+  margin-block: 1em;
+}
+
+.trip-form fieldset input {
+  width: 100%;
+}
+
+#travellers-input {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#travellers-input input {
+  width: 70%;
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+}
+
+#travellers-input button {
+  width: 15%;
+  background-color: #01001b;
+  color: #f6f2ee;
+  padding: 0;
+  margin: 0;
+  align-self: normal;
+}
+
+#travellers-input button:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#travellers-input button:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* REMOVES ARROWS FROM NUMBER INPUT  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* RESULT SCREEN */
+
+.result-screen {
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.result-screen h2,
+.result-screen h3 {
+  margin-top: 0.5em;
+}
+
+.result-screen h2 {
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0.5em;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.result-screen h3 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.result-screen p {
+  font-size: 1.1rem;
+  background-color: #f8eee6;
+  padding: 1em;
+  margin: 0.5em 0;
+  border-radius: 1.15rem;
+  box-shadow: 0 4px 5px 0 #01001b31;
+}
+
+.dates {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+.dates p {
+  font-size: 1.3rem;
+  min-width: 30%;
+  max-width: 40%;
+  padding: 0.4em 0.75em 0.5em;
+  white-space: nowrap;
+}
+
+.arrow-icon {
+  margin: 0;
+  line-height: 0.5;
+  position: relative;
+  top: 0.065em;
+  font-size: 1.75em;
+  color: #01001b;
+}
+
+p.destination {
+  font-size: 1.75rem;
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+p button {
+  display: block;
+  margin: 1em auto 0;
+  width: 50%;
+  font-size: 1.15rem;
+  padding: 0.25em 0.5em;
+}
+
+/* Loading spinner */
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #e68151;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Animation */
+  animation: bounce 1.25s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: 0.625s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
