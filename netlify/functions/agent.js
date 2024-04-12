@@ -58,7 +58,7 @@ export async function getCurrentWeather({ location }) {
     const response = await fetch(
       `/.netlify/functions/getCurrentWeather?location=${location}`
     );
-    const data = response.json();
+    const data = await response.json();
     return JSON.stringify(data);
   } catch (err) {
     console.error(err.message);
