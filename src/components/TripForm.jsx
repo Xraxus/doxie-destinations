@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { TripContext } from "../App";
-import agent from "../utils/config";
 
 export default function TripForm() {
   const { tripData, setTripData, setStage, setResult } =
@@ -27,7 +26,7 @@ export default function TripForm() {
         tripData,
       }),
     });
-    const data =await response.json();
+    const data = await response.json();
     setResult(data);
     setStage(2);
   }
