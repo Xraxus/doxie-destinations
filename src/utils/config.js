@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import { tools } from "./tools";
 
 /** OpenAI config */
-const OPENAI_API_KEY = process.env.VITE_OPENAI_API_KEY;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 if (!OPENAI_API_KEY) throw new Error("OpenAI API key is missing or invalid.");
 export const openai = new OpenAI({
