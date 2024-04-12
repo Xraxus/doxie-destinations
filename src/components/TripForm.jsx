@@ -27,7 +27,7 @@ export default function TripForm() {
       }),
     });
     const data = await response.json();
-    setResult(data);
+    setResult(JSON.parse(data));
     setStage(2);
   }
 
