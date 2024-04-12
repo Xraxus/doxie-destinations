@@ -116,7 +116,7 @@ export default function TripForm() {
         type="text"
         id="budget"
         name="budget"
-        placeholder="1000"
+        placeholder="1000 $"
         value={tripData.budget}
         onChange={(e) => handleChange(e)}
         required
