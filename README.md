@@ -2,7 +2,7 @@
 
 Plan your next vacation with help of AI Travel Agent!
 
-[Check out here!]()
+[Check out here!](https://doxiedestinations.netlify.app)
 
 ---
 
@@ -13,19 +13,19 @@ Plan your next vacation with help of AI Travel Agent!
 ### Technologies Used
 
 - **Frontend:** React, JavaScript, CSS, HTML
-- **Backend:** ~~Netlify~~
+- **Backend:** Netlify
 - **AI Models:** OpenAI (GPT-3.5-turbo)
 
 ### Installation Instructions
 
-Local - vite (using main branch)
+Local - vite (main branch)
 
 1. Clone the repository
 2. Install dependencies
 3. Set up VITE_OPENAI_API_KEY and VITE_OPENWEATHER_API_KEY in .env file located at the root of project directory
 4. Launch using 'npm run dev'
 
-Using netlify (netlifyDeploy branch)
+Using netlify (deploy branch)
 
 1. Clone the repository
 2. Connect the repository to Netlify.
