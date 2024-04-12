@@ -62,10 +62,7 @@ async function getCurrentWeather({ location }) {
     weatherUrl.searchParams.append("lat", lat);
     weatherUrl.searchParams.append("lon", lon);
     weatherUrl.searchParams.append("units", "metric");
-    weatherUrl.searchParams.append(
-      "appid",
-      import.meta.env.VITE_OPENWEATHER_API_KEY
-    );
+    weatherUrl.searchParams.append("appid", process.env.OPENWEATHER_API_KEY);
     const res = await fetch(weatherUrl);
     const data = await res.json();
     return JSON.stringify(data);
@@ -80,10 +77,7 @@ async function getCoordinates(city) {
     const weatherUrl = new URL("http://api.openweathermap.org/geo/1.0/direct");
     weatherUrl.searchParams.append("q", city);
     weatherUrl.searchParams.append("limit", 1);
-    weatherUrl.searchParams.append(
-      "appid",
-      import.meta.env.VITE_OPENWEATHER_API_KEY
-    );
+    weatherUrl.searchParams.append("appid", process.env.OPENWEATHER_API_KEY);
     const res = await fetch(weatherUrl);
     const data = await res.json();
     const { lat, lon } = data[0];
