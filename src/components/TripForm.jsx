@@ -18,8 +18,17 @@ export default function TripForm() {
   async function handleSubmit(e) {
     e.preventDefault();
     setStage(-1);
-    const result = await agent(tripData);
-    setResult(JSON.parse(result));
+    const response = await fetch(`/.netlify/functions/agent`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        tripData,
+      }),
+    });
+    const data =await response.json();
+    setResult(data);
     setStage(2);
   }
 
