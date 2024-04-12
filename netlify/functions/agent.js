@@ -32,7 +32,7 @@ Here's an example response format:
     "weather": "Expect mild weather with a low of 19°C and a high of 25°C", 
     "flight": "The best option for you is with Delta Airlines with a layover in Oslo", "hotel": "We recommend you stay at the Premiere Inn hotel in central Paris"
 }
-
+RETURN JSON ONLY
 `,
     },
     { role: "user", content: JSON.stringify(tripData) },
