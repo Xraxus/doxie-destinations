@@ -2,6 +2,9 @@
 
 Plan your next vacation with help of AI Travel Agent!
 
+![image](https://github.com/Xraxus/doxie-destinations/assets/100704138/430891ed-643b-4ee5-b1c0-37e09751765f)
+
+
 [Check out here!](https://doxiedestinations.netlify.app)
 
 ---
